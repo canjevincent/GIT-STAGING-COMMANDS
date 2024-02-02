@@ -1,0 +1,36 @@
+step 1 use "git init" to initialize the fresh folder
+       use "git status" to check the status of the current folder
+       use "git add 'file name' " or "git add ." to add all files/folders - Pre-setting the files that intended to add on the repository
+       use "git commit -m "message before commiting" " - Setting the files that is intended to commit on the repository and adding a message
+       use "git log" to check history of commits and repository
+       use "git commit -m "message before commiting" --amend" - Commit the files again and add other files thas has not been included on the previous commit by using "--amend"
+       use "git reset 'file name' " or "git reset ." to reset all files/folders - Remove the files that has been intended to add on the repository similar to removing "git add 'file name' " or "git add ."
+       use "git checkout "file name" or git checkout ." undo record of changes on the file that has been updated but limited to undoing files that has used "git add"
+
+step 2 use "get checkout "commit version" " return to the previous commited version
+       use "git log --all --graph" git will display different branches if you return on the previous commit and start adding "git add" new changes and commits
+       use "git checkout "commit version" "specific file" " to revert a specific commit version on a specific file
+
+       # Note: -use "git commit -m "message before commiting"" after switching to a previous version if you want to avoid creating more branches
+               -create short commands by using new alias "git config --global alias.s "example status" " - replace status with s for shorter command
+               -add new file ".gitignore" to set all files that you want to ignore if you commit all the files
+               -use "rm -rf .git" to completely remove git from the folder
+               -press "q" to quit git
+
+step 3 use "git remote add origin 'link of the repository' " to create a link from the local repository to the github repository
+       use "git remote" to check the current repository
+       use "git remote -v" to check the current repository and display full details
+       use "git remote remove 'example: origin' -v" to remove any origin repository
+       use "git config --global credential.username "account username" " to set username on git
+       use "git push origin master" to upload local repository and master branch
+
+       # Note: -While local repository has been already uploaded on github
+               -use "git add 'file name' " or "git add ." to add all files/folders - Pre-setting the files that intended to add on the repository
+               -use "git commit -m "message before commiting" " - Setting the files that is intended to commit on the repository and adding a message
+               -use "git push origin master" to re upload local repository and master branch ( only new changes will be applied )
+               -use "git push origin master --set-up-stream" to enable using "git push" without combined "origin master" on the next time you push new changes
+               -use "git push origin master -f" to force push and rewrite the commits on the github repository
+
+step 4 use "git clone "repository link" " to download the full git repository
+       use "git fetch" to update local branches into updated git repository
+       use "git pull origin master" to sync repository to local branch
